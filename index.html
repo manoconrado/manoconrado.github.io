@@ -1,25 +1,1185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N7G7J537');</script>
-  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitor Yamashita Akamine | Paid Media & Analytics Specialist</title>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+    <!-- ================================================================= -->
+    <!-- GOOGLE TAG MANAGER (GTM) SNIPPET - REPLACE GTM-XXXXXXX WITH YOUR CONTAINER ID -->
+    <!-- ================================================================= -->
+    <script>
+      // Initialize dataLayer array BEFORE GTM script loads
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // Initial page view event payload for SPA baseline
+      window.dataLayer.push({
+        'event': 'page_view_init',
+        'page_title': 'Home - Vitor Yamashita Akamine',
+        'page_location': window.location.href,
+        'user_region': 'Vancouver / Victoria BC',
+        'user_type': 'Prospective Client'
+      });
+    </script>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N7G7J537'); // <--- REPLACE THIS ID
+    </script>
+    <!-- ================================================================= -->
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                900: '#312e81',
+              },
+              accent: {
+                emerald: '#10b981',
+                cyan: '#06b6d4',
+                amber: '#f59e0b',
+                rose: '#f43f5e'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Fira Code', 'Monaco', 'Consolas', 'monospace']
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      .glass-card {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-nav {
+        background: rgba(15, 23, 42, 0.85);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glow-effect {
+        box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.4);
+      }
+      .active-nav-item {
+        color: #818cf8 !important;
+        border-bottom: 2px solid #6366f1;
+      }
+      /* Custom scrollbar for debug terminal */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #090d16;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 3px;
+      }
+    </style>
 </head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7G7J537"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-white pb-64">
 
-  <h1>Welcome to my website! Sandbox to learn and play with GTM and GA4 </h1>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7G7J537"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- TOP NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-nav">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo / Name -->
+          <div class="flex items-center space-x-3">
+            <a href="#home" onclick="navigateTo('home', 'Header Logo Click')" class="flex items-center space-x-3 group">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-cyan flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                VY
+              </div>
+              <div>
+                <span class="font-bold text-lg text-white tracking-tight block leading-none">Vitor Y. Akamine</span>
+                <span class="text-xs text-indigo-300 font-medium tracking-wide">Paid Media & GA4 Specialist</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-8">
+            <button onclick="navigateTo('home', 'Nav Menu - Home')" id="nav-btn-home" class="nav-item text-slate-300 hover:text-white px-2 py-1 text-sm font-medium transition-all active-nav-item" data-gtm-category="Navigation" data-gtm-action="Menu Click" data-gtm-label="Home">
+              <i class="fa-solid font-sm fa-house mr-1.5 opacity-70"></i>Home
+            </button>
+            <button onclick="navigateTo('services', 'Nav Menu - Services')" id="nav-btn-services" class="nav-item text-slate-300 hover:text-white px-2 py-1 text-sm font-medium transition-all" data-gtm-category="Navigation" data-gtm-action="Menu Click" data-gtm-label="About & Services">
+              <i class="fa-solid font-sm fa-chart-pie mr-1.5 opacity-70"></i>Services & About
+            </button>
+            <button onclick="navigateTo('portfolio', 'Nav Menu - Portfolio')" id="nav-btn-portfolio" class="nav-item text-slate-300 hover:text-white px-2 py-1 text-sm font-medium transition-all" data-gtm-category="Navigation" data-gtm-action="Menu Click" data-gtm-label="Case Studies">
+              <i class="fa-solid font-sm fa-layer-group mr-1.5 opacity-70"></i>Case Studies
+            </button>
+            <button onclick="navigateTo('contact', 'Nav Menu - Contact')" id="nav-btn-contact" class="nav-item text-slate-300 hover:text-white px-2 py-1 text-sm font-medium transition-all" data-gtm-category="Navigation" data-gtm-action="Menu Click" data-gtm-label="Contact">
+              <i class="fa-solid font-sm fa-envelope-open-text mr-1.5 opacity-70"></i>Contact & Audit
+            </button>
+          </nav>
+
+          <!-- Top CTA & GTM Helper Badge -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span> GTM Event Mode Active
+            </span>
+            <button onclick="navigateTo('contact', 'Top CTA Button'); trackCustomClick('Primary CTA Header', 'Request Audit', 'Header Top Right');" 
+                    class="bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-all shadow-md hover:shadow-indigo-500/20 flex items-center space-x-2"
+                    data-gtm-category="Conversion" data-gtm-action="Header CTA" data-gtm-label="Request Free Audit">
+              <span>Free Paid Media Audit</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button onclick="toggleMobileMenu()" class="text-slate-400 hover:text-white p-2">
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+        <button onclick="navigateTo('home', 'Mobile Nav Home'); toggleMobileMenu();" class="block w-full text-left py-2 px-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Home</button>
+        <button onclick="navigateTo('services', 'Mobile Nav Services'); toggleMobileMenu();" class="block w-full text-left py-2 px-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">About & Services</button>
+        <button onclick="navigateTo('portfolio', 'Mobile Nav Portfolio'); toggleMobileMenu();" class="block w-full text-left py-2 px-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Case Studies</button>
+        <button onclick="navigateTo('contact', 'Mobile Nav Contact'); toggleMobileMenu();" class="block w-full text-left py-2 px-3 rounded-md text-base font-medium text-slate-300 hover:bg-slate-800 hover:text-white">Contact & Audit</button>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER FOR SINGLE PAGE APPLICATION (SPA) -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+      <!-- ================================================================= -->
+      <!-- PAGE 1: HOME PAGE -->
+      <!-- ================================================================= -->
+      <section id="page-home" class="spa-page space-y-16">
+        
+        <!-- Hero Section -->
+        <div class="relative overflow-hidden rounded-3xl glass-card p-8 sm:p-12 lg:p-16 border border-slate-800">
+          <div class="absolute -right-20 -top-20 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 max-w-3xl">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-xs text-indigo-300 font-medium mb-6">
+              <i class="fa-solid fa-location-dot text-indigo-400"></i>
+              <span>Based in Vancouver & Victoria, BC | Serving Global Clients</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Turn Paid Ads Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 via-indigo-300 to-accent-cyan">Scalable Revenue</span>
+            </h1>
+            
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 font-normal leading-relaxed">
+              Hi, I'm <strong class="text-white">Vitor Yamashita Akamine</strong>. I combine performance PPC strategy (Google Ads, Meta Ads, TikTok) with bulletproof GA4 server-side tracking and GTM data architecture to maximize your ROAS.
+            </p>
+
+            <!-- Action Buttons for GTM Event Testing -->
+            <div class="mt-8 flex flex-wrap gap-4 items-center">
+              <button onclick="navigateTo('contact', 'Hero Primary CTA'); trackCustomClick('Hero CTA', 'Schedule Consultation', 'Hero Banner');" 
+                      id="hero-cta-primary"
+                      class="bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-indigo-600/30 flex items-center space-x-3 text-sm sm:text-base transform active:scale-95"
+                      data-gtm-category="Conversion CTA" data-gtm-action="Hero Click" data-gtm-label="Schedule Consultation">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Schedule Strategy Call</span>
+              </button>
+
+              <button onclick="navigateTo('portfolio', 'Hero Secondary CTA'); trackCustomClick('Hero Secondary CTA', 'Explore Case Studies', 'Hero Banner');" 
+                      id="hero-cta-secondary"
+                      class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-6 py-3.5 rounded-xl transition-all flex items-center space-x-2 text-sm sm:text-base transform active:scale-95"
+                      data-gtm-category="Engagement" data-gtm-action="Hero Click" data-gtm-label="Explore Case Studies">
+                <i class="fa-solid fa-chart-line text-indigo-400"></i>
+                <span>View Case Studies</span>
+              </button>
+
+              <button onclick="triggerDataLayerEvent('lead_magnet_click', { 'file_name': '2026_Paid_Media_Playbook.pdf', 'download_type': 'Playbook PDF' }); showToast('PDF Download event sent to dataLayer!');" 
+                      id="hero-btn-download"
+                      class="border border-slate-700 hover:border-indigo-500/50 bg-slate-900/50 text-indigo-300 hover:text-white px-5 py-3.5 rounded-xl font-medium text-xs sm:text-sm flex items-center space-x-2 transition-all"
+                      data-gtm-category="Resource Download" data-gtm-action="Download Click" data-gtm-label="2026 Paid Media Playbook">
+                <i class="fa-solid fa-file-pdf text-red-400 text-base"></i>
+                <span>Download Media Playbook (.PDF)</span>
+              </button>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80">
+              <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                <p class="text-3xl font-extrabold text-indigo-400">$2.5M+</p>
+                <p class="text-xs text-slate-400 mt-1 font-medium">Ad Spend Managed</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                <p class="text-3xl font-extrabold text-emerald-400">4.8x</p>
+                <p class="text-xs text-slate-400 mt-1 font-medium">Average Campaign ROAS</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                <p class="text-3xl font-extrabold text-cyan-400">100%</p>
+                <p class="text-xs text-slate-400 mt-1 font-medium">GA4 & GTM Compliant</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-900/40 border border-slate-800">
+                <p class="text-3xl font-extrabold text-amber-400">150+</p>
+                <p class="text-xs text-slate-400 mt-1 font-medium">Tracking Audits Done</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Budget & ROI Estimator (GTM Interactive Testing Tool) -->
+        <div class="glass-card rounded-3xl p-8 border border-slate-800">
+          <div class="max-w-xl">
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">GTM Interactive Feature #1</span>
+            <h2 class="text-2xl font-bold text-white mt-1">Paid Media Growth & ROI Calculator</h2>
+            <p class="text-slate-400 text-sm mt-2">Adjust monthly ad spend slider to calculate estimated return and fire real-time dataLayer events.</p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-6">
+              <div>
+                <div class="flex justify-between text-sm font-medium text-slate-300 mb-2">
+                  <span>Monthly Ad Spend (CAD)</span>
+                  <span id="spend-display" class="font-bold text-indigo-400 text-base">$5,000 / mo</span>
+                </div>
+                <input type="range" id="spend-slider" min="1000" max="50000" step="1000" value="5000" 
+                       oninput="updateRoiCalculator()" 
+                       onchange="trackSliderChange(this.value)"
+                       class="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                <div class="flex justify-between text-xs text-slate-500 mt-1">
+                  <span>$1k</span>
+                  <span>$25k</span>
+                  <span>$50k+</span>
+                </div>
+              </div>
+
+              <!-- Channel Selector Toggle Buttons -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Primary Platform</label>
+                <div class="flex flex-wrap gap-2" id="channel-btn-group">
+                  <button onclick="selectChannel('Google Ads')" class="channel-btn px-4 py-2 rounded-xl text-xs font-semibold border border-indigo-500 bg-brand-600/30 text-white" data-channel="Google Ads">Google Search & Shopping</button>
+                  <button onclick="selectChannel('Meta Ads')" class="channel-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:border-slate-600" data-channel="Meta Ads">Meta (FB & IG)</button>
+                  <button onclick="selectChannel('Omnichannel')" class="channel-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:border-slate-600" data-channel="Omnichannel">Full Omnichannel</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-4">
+              <div>
+                <span class="text-xs text-slate-400 block">Estimated Monthly Revenue</span>
+                <span id="roi-revenue" class="text-3xl font-extrabold text-emerald-400">$20,000</span>
+              </div>
+              <div class="grid grid-cols-2 gap-4 pt-3 border-t border-slate-800">
+                <div>
+                  <span class="text-xs text-slate-400 block">Est. ROAS</span>
+                  <span id="roi-roas" class="text-lg font-bold text-white">4.0x</span>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block">Target CPA</span>
+                  <span id="roi-cpa" class="text-lg font-bold text-cyan-400">$45.00</span>
+                </div>
+              </div>
+
+              <button onclick="triggerRoiDataLayerPush()" 
+                      class="w-full mt-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2.5 px-4 rounded-xl text-xs transition-all flex items-center justify-center space-x-2 shadow-md"
+                      data-gtm-category="Calculator" data-gtm-action="Calculate ROI" data-gtm-label="Log ROI Projection">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Push ROI Projection to GTM</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platform Badges & Quick Action Grid -->
+        <div>
+          <div class="text-center max-w-xl mx-auto mb-8">
+            <h3 class="text-xl font-bold text-white">Platforms & Tracking Capabilities</h3>
+            <p class="text-xs text-slate-400 mt-1">Click each capability below to test custom GTM click event triggers.</p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div onclick="trackSkillClick('Google Ads & Search PPC')" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all hover:-translate-y-1 group">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-3 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                <i class="fa-brands fa-google"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white">Google Ads PPC</h4>
+              <p class="text-xs text-slate-400 mt-1">Search, PMax, Shopping, YouTube Ads</p>
+            </div>
+
+            <div onclick="trackSkillClick('Meta Ads & Instagram')" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all hover:-translate-y-1 group">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-3 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                <i class="fa-brands fa-meta"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white">Meta Paid Ads</h4>
+              <p class="text-xs text-slate-400 mt-1">Facebook, Instagram, CAPI Integration</p>
+            </div>
+
+            <div onclick="trackSkillClick('GA4 & Server-Side GTM')" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all hover:-translate-y-1 group">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-3 group-hover:bg-amber-500 group-hover:text-white transition-all">
+                <i class="fa-solid fa-chart-simple"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white">GA4 Setup & Audit</h4>
+              <p class="text-xs text-slate-400 mt-1">Custom dimensions, funnel tracking, Stape.io</p>
+            </div>
+
+            <div onclick="trackSkillClick('Conversion Rate Optimization')" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition-all hover:-translate-y-1 group">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-3 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                <i class="fa-solid fa-filter-circle-dollar"></i>
+              </div>
+              <h4 class="text-sm font-bold text-white">CRO & Landing Pages</h4>
+              <p class="text-xs text-slate-400 mt-1">A/B Testing, Heatmaps, Lead Forms</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- PAGE 2: ABOUT & SERVICES PAGE -->
+      <!-- ================================================================= -->
+      <section id="page-services" class="spa-page hidden space-y-12">
+        
+        <!-- Header Banner -->
+        <div class="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800">
+          <div class="max-w-2xl">
+            <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-semibold border border-brand-500/20">About & Services</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Data-Driven Performance Marketing</h1>
+            <p class="text-slate-300 text-sm sm:text-base mt-2">
+              Combining precision Google & Meta ad buying with clean Google Tag Manager implementation so every ad dollar is accounted for.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Tabs Component for GTM Event Testing -->
+        <div class="glass-card rounded-3xl p-8 border border-slate-800">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <h2 class="text-xl font-bold text-white">Service Breakdown</h2>
+              <p class="text-xs text-slate-400">Click service tabs to push `service_tab_select` events to dataLayer.</p>
+            </div>
+            
+            <!-- Tab Buttons -->
+            <div class="flex bg-slate-900 p-1.5 rounded-xl border border-slate-800 space-x-1">
+              <button onclick="switchServiceTab('paid-media')" id="tab-btn-paid-media" class="service-tab-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all bg-brand-600 text-white">Paid Media PPC</button>
+              <button onclick="switchServiceTab('gtm-ga4')" id="tab-btn-gtm-ga4" class="service-tab-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-white">GTM & GA4 Tracking</button>
+              <button onclick="switchServiceTab('cro-audit')" id="tab-btn-cro-audit" class="service-tab-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-white">CRO & Audits</button>
+            </div>
+          </div>
+
+          <!-- Tab Content 1: Paid Media -->
+          <div id="tab-content-paid-media" class="service-tab-content pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold text-white flex items-center">
+                <i class="fa-solid fa-bullseye text-brand-500 mr-2"></i> Paid Search & Social Management
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Full lifecycle management of multi-channel ad accounts. From campaign setup and keyword research to audience segmentation and automated bidding strategies.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2">
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Google Ads (Search, Shopping, Performance Max)</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> Meta Ads (Facebook & Instagram Retargeting & Prospecting)</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-emerald-400 mr-2"></i> TikTok & LinkedIn B2B Paid Campaigns</li>
+              </ul>
+              <button onclick="triggerDataLayerEvent('service_inquiry_click', { 'service_name': 'Paid Media PPC', 'pricing_tier': 'Growth Retainer' }); showToast('Inquiry logged in dataLayer');" 
+                      class="mt-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-all"
+                      data-gtm-category="Service Click" data-gtm-action="Inquiry" data-gtm-label="Paid Media PPC">
+                Inquire About Paid Media
+              </button>
+            </div>
+            <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800 space-y-3">
+              <span class="text-xs font-mono text-indigo-400 font-semibold block">Deliverable Checklist</span>
+              <div class="text-xs text-slate-300 space-y-2">
+                <div class="p-2 bg-slate-800/50 rounded-lg flex justify-between"><span>Account Restructuring</span><span class="text-emerald-400 font-bold">Included</span></div>
+                <div class="p-2 bg-slate-800/50 rounded-lg flex justify-between"><span>Ad Copy & Creative Testing</span><span class="text-emerald-400 font-bold">Included</span></div>
+                <div class="p-2 bg-slate-800/50 rounded-lg flex justify-between"><span>Weekly ROAS Optimization</span><span class="text-emerald-400 font-bold">Included</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 2: GTM & GA4 -->
+          <div id="tab-content-gtm-ga4" class="service-tab-content hidden pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold text-white flex items-center">
+                <i class="fa-solid fa-code text-cyan-400 mr-2"></i> Analytics Architecture & GTM Setup
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Fix missing conversions, ad blocker data loss, and duplicate reporting with a robust server-side GTM setup and GA4 custom dimension taxonomy.
+              </p>
+              <ul class="text-xs text-slate-400 space-y-2">
+                <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Server-side GTM Tagging via Stape.io / GCP</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> Meta Conversions API (CAPI) & Enhanced Conversions</li>
+                <li class="flex items-center"><i class="fa-solid fa-check text-cyan-400 mr-2"></i> E-commerce DataLayer Specification & Implementation</li>
+              </ul>
+              <button onclick="triggerDataLayerEvent('service_inquiry_click', { 'service_name': 'GTM Tracking Architecture', 'pricing_tier': 'One-Time Setup' }); showToast('Inquiry logged in dataLayer');" 
+                      class="mt-2 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-all"
+                      data-gtm-category="Service Click" data-gtm-action="Inquiry" data-gtm-label="GTM & GA4 Tracking">
+                Inquire About Tracking Setup
+              </button>
+            </div>
+            <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800 space-y-3">
+              <span class="text-xs font-mono text-cyan-400 font-semibold block">Tech Stack Tested</span>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300 border border-slate-700">Google Tag Manager</span>
+                <span class="px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300 border border-slate-700">GA4 Analytics</span>
+                <span class="px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300 border border-slate-700">Looker Studio</span>
+                <span class="px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300 border border-slate-700">Meta CAPI</span>
+                <span class="px-2.5 py-1 bg-slate-800 rounded-lg text-slate-300 border border-slate-700">BigQuery</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content 3: CRO -->
+          <div id="tab-content-cro-audit" class="service-tab-content hidden pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h3 class="text-lg font-bold text-white flex items-center">
+                <i class="fa-solid fa-magnifying-glass-chart text-amber-400 mr-2"></i> Conversion Rate Optimization & Audits
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Comprehensive 40-point technical audit inspecting ad account setups, landing page conversion friction points, and tracking discrepancies.
+              </p>
+              <button onclick="triggerDataLayerEvent('service_inquiry_click', { 'service_name': 'CRO Audit', 'pricing_tier': 'Audit Package' }); showToast('Inquiry logged in dataLayer');" 
+                      class="mt-2 bg-amber-600 hover:bg-amber-500 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition-all"
+                      data-gtm-category="Service Click" data-gtm-action="Inquiry" data-gtm-label="CRO & Audits">
+                Request Full Audit Checklist
+              </button>
+            </div>
+            <div class="bg-slate-900/60 p-5 rounded-2xl border border-slate-800">
+              <span class="text-xs font-mono text-amber-400 font-semibold block mb-2">Audit Sample Output</span>
+              <p class="text-xs text-slate-400">Receive a Loom video review + custom Google Sheets report detailing wasted ad spend and tracking fixes.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- PAGE 3: PORTFOLIO & CASE STUDIES PAGE -->
+      <!-- ================================================================= -->
+      <section id="page-portfolio" class="spa-page hidden space-y-12">
+        
+        <div class="glass-card rounded-3xl p-8 sm:p-10 border border-slate-800">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">Proven Results</span>
+              <h1 class="text-3xl font-extrabold text-white mt-3">Paid Media Case Studies</h1>
+              <p class="text-slate-300 text-sm mt-1">Filter case studies below to test dynamic event filters in GTM.</p>
+            </div>
+
+            <!-- Filter Buttons for GTM Event Testing -->
+            <div class="flex flex-wrap gap-2">
+              <button onclick="filterCaseStudies('all')" class="portfolio-filter-btn active-filter px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white" data-filter="all">All Projects</button>
+              <button onclick="filterCaseStudies('ecommerce')" class="portfolio-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="ecommerce">E-Commerce</button>
+              <button onclick="filterCaseStudies('leadgen')" class="portfolio-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="leadgen">Lead Gen / B2B</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Studies Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="case-study-card glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="ecommerce">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 text-xs font-semibold">E-Commerce</span>
+                <span class="text-xs text-slate-500">Google Ads + Meta</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Apparel Brand Scaling</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                Scaled monthly spend from $10k to $45k while keeping ROAS above 3.8x using PMax and Meta CAPI integration.
+              </p>
+              <div class="mt-4 p-3 bg-slate-900/80 rounded-xl flex justify-between items-center text-xs">
+                <span class="text-slate-400">Revenue Growth</span>
+                <span class="font-bold text-emerald-400 text-sm">+240% YoY</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <button onclick="openCaseModal('Apparel Brand Scaling', 'E-Commerce', '240% YoY', 'https://example.com/case1')" 
+                      class="text-indigo-400 hover:text-indigo-300 text-xs font-semibold flex items-center space-x-1"
+                      data-gtm-category="Portfolio" data-gtm-action="Modal View" data-gtm-label="Apparel Brand Case Study">
+                <span>View Breakdown</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+              
+              <button onclick="triggerDataLayerEvent('select_item', { 'item_id': 'CS_001', 'item_name': 'Apparel Brand Scaling', 'item_category': 'E-Commerce' }); showToast('Item selected in dataLayer');"
+                      class="text-slate-500 hover:text-white text-xs">
+                <i class="fa-solid fa-tag"></i> Push Item Event
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="case-study-card glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="leadgen">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 text-xs font-semibold">SaaS / B2B</span>
+                <span class="text-xs text-slate-500">Google Search PPC</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">B2B SaaS Lead Cost Reduction</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                Restructured match-type strategy and implemented offline conversion tracking (OCT) in GA4 to filter low-quality leads.
+              </p>
+              <div class="mt-4 p-3 bg-slate-900/80 rounded-xl flex justify-between items-center text-xs">
+                <span class="text-slate-400">Cost Per Demo</span>
+                <span class="font-bold text-emerald-400 text-sm">-42% Reduction</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <button onclick="openCaseModal('B2B SaaS Lead Cost Reduction', 'SaaS / B2B', '-42% CPA', 'https://example.com/case2')" 
+                      class="text-indigo-400 hover:text-indigo-300 text-xs font-semibold flex items-center space-x-1"
+                      data-gtm-category="Portfolio" data-gtm-action="Modal View" data-gtm-label="B2B SaaS Case Study">
+                <span>View Breakdown</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+
+              <button onclick="triggerDataLayerEvent('select_item', { 'item_id': 'CS_002', 'item_name': 'B2B SaaS Lead Reduction', 'item_category': 'SaaS / B2B' }); showToast('Item selected in dataLayer');"
+                      class="text-slate-500 hover:text-white text-xs">
+                <i class="fa-solid fa-tag"></i> Push Item Event
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="case-study-card glass-card rounded-2xl p-6 border border-slate-800 flex flex-col justify-between" data-category="ecommerce">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 text-xs font-semibold">E-Commerce</span>
+                <span class="text-xs text-slate-500">GA4 Server-Side GTM</span>
+              </div>
+              <h3 class="text-lg font-bold text-white">Server-Side Tracking Recovery</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                Recovered 18% of lost conversions due to iOS Safari tracking prevention by implementing Stape.io custom domain GTM setup.
+              </p>
+              <div class="mt-4 p-3 bg-slate-900/80 rounded-xl flex justify-between items-center text-xs">
+                <span class="text-slate-400">Attributed Revenue</span>
+                <span class="font-bold text-emerald-400 text-sm">+$85,000</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <button onclick="openCaseModal('Server-Side Tracking Recovery', 'GA4 Infrastructure', '+$85k Recovered', 'https://example.com/case3')" 
+                      class="text-indigo-400 hover:text-indigo-300 text-xs font-semibold flex items-center space-x-1"
+                      data-gtm-category="Portfolio" data-gtm-action="Modal View" data-gtm-label="Server-Side Recovery Case Study">
+                <span>View Breakdown</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+
+              <button onclick="triggerDataLayerEvent('select_item', { 'item_id': 'CS_003', 'item_name': 'Server-Side Recovery', 'item_category': 'GA4 Infrastructure' }); showToast('Item selected in dataLayer');"
+                      class="text-slate-500 hover:text-white text-xs">
+                <i class="fa-solid fa-tag"></i> Push Item Event
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Video Simulation Demo (For Media Play / Pause GTM Events) -->
+        <div class="glass-card rounded-3xl p-8 border border-slate-800">
+          <div class="max-w-xl">
+            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">GTM Interactive Feature #2</span>
+            <h2 class="text-xl font-bold text-white mt-1">Video Event Tracking Simulator</h2>
+            <p class="text-slate-400 text-xs mt-1">Simulate YouTube/HTML5 video interactions to test video engagement triggers in GTM.</p>
+          </div>
+
+          <div class="mt-6 p-6 bg-slate-900/90 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4">
+              <div id="video-status-icon" class="w-12 h-12 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Paid Media Audit Strategy Walkthrough (2:30)</h4>
+                <p id="video-status-text" class="text-xs text-slate-400">Status: Stopped (0%)</p>
+              </div>
+            </div>
+
+            <div class="flex items-center space-x-2">
+              <button onclick="simVideoAction('play')" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-all">
+                <i class="fa-solid fa-play mr-1"></i> Play
+              </button>
+              <button onclick="simVideoAction('progress_50')" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                50% Progress
+              </button>
+              <button onclick="simVideoAction('complete')" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                100% Complete
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ================================================================= -->
+      <!-- PAGE 4: CONTACT & AUDIT FORM PAGE -->
+      <!-- ================================================================= -->
+      <section id="page-contact" class="spa-page hidden space-y-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Contact Info -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="glass-card rounded-3xl p-8 border border-slate-800 space-y-6">
+              <div>
+                <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold border border-indigo-500/20">Get In Touch</span>
+                <h1 class="text-3xl font-extrabold text-white mt-3">Let's Optimize Your Ad Campaigns</h1>
+                <p class="text-slate-300 text-sm mt-2">
+                  Ready to eliminate wasted ad spend and scale your return? Send a message or request a complimentary 20-minute paid media audit.
+                </p>
+              </div>
+
+              <div class="space-y-4 pt-4 border-t border-slate-800 text-sm">
+                <div class="flex items-center space-x-3 text-slate-300">
+                  <div class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-indigo-400">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-slate-500 block">Email Direct</span>
+                    <a href="mailto:vitor.akamine@example.com" onclick="trackCustomClick('Contact Info', 'Email Click', 'vitor.akamine@example.com')" class="hover:text-indigo-400 transition-colors font-medium">vitor.akamine@example.com</a>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-3 text-slate-300">
+                  <div class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center text-indigo-400">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs text-slate-500 block">Locations</span>
+                    <span class="font-medium">Vancouver & Victoria, BC, Canada</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Outbound Social Links for GTM Tracking -->
+              <div class="pt-4 border-t border-slate-800">
+                <span class="text-xs text-slate-400 font-semibold block mb-3 uppercase tracking-wider">Social Channels (GTM Outbound Trackers)</span>
+                <div class="flex space-x-3">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener" 
+                     onclick="trackOutboundLink(this.href, 'LinkedIn Profile')"
+                     class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-indigo-500 transition-all"
+                     data-gtm-category="Outbound Link" data-gtm-action="Social Click" data-gtm-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://github.com" target="_blank" rel="noopener" 
+                     onclick="trackOutboundLink(this.href, 'GitHub Repository')"
+                     class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-indigo-500 transition-all"
+                     data-gtm-category="Outbound Link" data-gtm-action="Social Click" data-gtm-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener" 
+                     onclick="trackOutboundLink(this.href, 'Twitter Profile')"
+                     class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-indigo-500 transition-all"
+                     data-gtm-category="Outbound Link" data-gtm-action="Social Click" data-gtm-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Audit / Lead Form -->
+          <div class="lg:col-span-7">
+            <div class="glass-card rounded-3xl p-8 border border-slate-800">
+              <div class="mb-6">
+                <h2 class="text-2xl font-bold text-white">Request Free Paid Media Audit</h2>
+                <p class="text-xs text-slate-400 mt-1">Submitting this form triggers a custom `generate_lead` dataLayer event with form metadata.</p>
+              </div>
+
+              <form id="audit-form" onsubmit="handleAuditFormSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-name" class="block text-xs font-semibold text-slate-300 mb-1">Full Name *</label>
+                    <input type="text" id="form-name" required placeholder="Vitor Akamine" 
+                           class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 transition-all">
+                  </div>
+                  <div>
+                    <label for="form-email" class="block text-xs font-semibold text-slate-300 mb-1">Business Email *</label>
+                    <input type="email" id="form-email" required placeholder="vitor@company.com" 
+                           class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 transition-all">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="form-spend" class="block text-xs font-semibold text-slate-300 mb-1">Current Monthly Spend</label>
+                    <select id="form-spend" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 transition-all">
+                      <option value="Under $5k">Under $5,000 / mo</option>
+                      <option value="$5k-$15k">$5,000 - $15,000 / mo</option>
+                      <option value="$15k-$50k">$15,000 - $50,000 / mo</option>
+                      <option value="$50k+">$50,000+ / mo</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="form-goal" class="block text-xs font-semibold text-slate-300 mb-1">Primary Objective</label>
+                    <select id="form-goal" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 transition-all">
+                      <option value="Fix GA4 / Tracking">Fix GA4 / GTM Tracking</option>
+                      <option value="Lower CPA / Increase ROAS">Lower CPA / Increase ROAS</option>
+                      <option value="Scale Spend">Scale Spend Efficiently</option>
+                      <option value="Full Account Audit">Full Account Audit</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="form-website" class="block text-xs font-semibold text-slate-300 mb-1">Website URL</label>
+                  <input type="url" id="form-website" placeholder="https://yourbrand.com" 
+                         class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 transition-all">
+                </div>
+
+                <div>
+                  <label for="form-notes" class="block text-xs font-semibold text-slate-300 mb-1">Project Notes / Challenges</label>
+                  <textarea id="form-notes" rows="3" placeholder="Tell me about your current ad performance or tracking setup..." 
+                            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500 transition-all"></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" id="btn-submit-audit" 
+                          class="w-full bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold py-3.5 px-6 rounded-xl transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center space-x-2 text-sm"
+                          data-gtm-category="Form Submission" data-gtm-action="Submit" data-gtm-label="Audit Request Form">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Submit Audit Request & Push Event</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- CASE STUDY MODAL DIALOG -->
+    <div id="case-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+      <div class="glass-card max-w-lg w-full rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-2xl relative space-y-4">
+        <button onclick="closeCaseModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <span id="modal-category" class="px-2.5 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs font-semibold">Category</span>
+        <h3 id="modal-title" class="text-2xl font-bold text-white">Case Study Title</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Detailed strategy implemented involving custom conversion funnels, custom GTM variable tracking, and bidirectional CRM syncing for maximum campaign scaling.
+        </p>
+        <div class="p-4 bg-slate-900 rounded-xl border border-slate-800">
+          <span class="text-xs text-slate-400 block">Key Result Achieved</span>
+          <span id="modal-metric" class="text-2xl font-extrabold text-emerald-400">+200% Growth</span>
+        </div>
+        <div class="pt-4 flex justify-end space-x-3">
+          <button onclick="closeCaseModal()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700">Close</button>
+          <a id="modal-link" href="#" target="_blank" onclick="trackOutboundLink(this.href, 'Modal External Case Study')" class="px-4 py-2 rounded-xl bg-brand-600 text-white text-xs font-semibold hover:bg-brand-500">View Full Live Project</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- REAL-TIME GTM & GA4 DATALAYER DEBUGGER TERMINAL PANEL -->
+    <!-- ================================================================= -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 border-t border-slate-800 shadow-2xl backdrop-blur-xl transition-all duration-300" id="debug-panel">
+      <!-- Terminal Header bar -->
+      <div class="px-4 py-2.5 bg-slate-900/90 border-b border-slate-800/80 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="flex space-x-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+          </div>
+          <span class="text-xs font-mono font-semibold text-slate-300 flex items-center">
+            <i class="fa-solid fa-terminal text-indigo-400 mr-2"></i>
+            dataLayer Event Inspector & GTM Live Debugger
+          </span>
+          <span id="event-counter" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-brand-600/30 text-indigo-300 border border-brand-500/30">
+            1 Events Logged
+          </span>
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <button onclick="clearDataLayerLogs()" class="text-[11px] font-mono text-slate-400 hover:text-red-400 px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 transition-colors">
+            <i class="fa-solid fa-trash-can mr-1"></i> Clear Terminal
+          </button>
+          <button onclick="toggleDebugPanel()" class="text-slate-400 hover:text-white p-1">
+            <i id="panel-toggle-icon" class="fa-solid fa-chevron-down text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Log Content Window -->
+      <div id="debug-log-container" class="h-44 overflow-y-auto p-4 font-mono text-xs space-y-2 custom-scrollbar bg-slate-950">
+        <!-- Logs dynamically injected here -->
+      </div>
+    </div>
+
+    <!-- Notification Toast Element -->
+    <div id="toast-notification" class="fixed top-24 right-6 z-50 hidden bg-slate-800 text-white border border-brand-500/40 px-4 py-3 rounded-xl shadow-xl flex items-center space-x-3 transition-all duration-300 transform translate-y-2">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <div>
+        <h5 class="text-xs font-bold">dataLayer Push Triggered</h5>
+        <p id="toast-message" class="text-[11px] text-slate-300">Custom event pushed successfully.</p>
+      </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+      // Global State
+      let eventLogCount = 0;
+      let isPanelExpanded = true;
+      let selectedChannel = 'Google Ads';
+
+      // ==========================================
+      // SPA ROUTER LOGIC
+      // ==========================================
+      function navigateTo(pageId, triggerSource = 'Direct Nav') {
+        // Hide all pages
+        const pages = document.querySelectorAll('.spa-page');
+        pages.forEach(page => page.classList.add('hidden'));
+
+        // Show target page
+        const targetPage = document.getElementById(`page-${pageId}`);
+        if (targetPage) {
+          targetPage.classList.remove('hidden');
+        }
+
+        // Update Nav UI
+        const navButtons = document.querySelectorAll('.nav-item');
+        navButtons.forEach(btn => btn.classList.remove('active-nav-item'));
+        
+        const activeNavBtn = document.getElementById(`nav-btn-${pageId}`);
+        if (activeNavBtn) {
+          activeNavBtn.classList.add('active-nav-item');
+        }
+
+        // Format Page Title
+        const formattedTitle = pageId.charAt(0).toUpperCase() + pageId.slice(1);
+
+        // Push Virtual Page View to dataLayer for GTM / GA4 SPA Tracking
+        triggerDataLayerEvent('virtual_page_view', {
+          'page_title': `${formattedTitle} - Vitor Y. Akamine`,
+          'page_path': `/#${pageId}`,
+          'navigation_source': triggerSource
+        });
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+
+      // ==========================================
+      // DATALAYER PUSH & DEBUGGER FUNCTIONS
+      // ==========================================
+      function triggerDataLayerEvent(eventName, customParams = {}) {
+        eventLogCount++;
+
+        // Construct standard payload
+        const payload = {
+          'event': eventName,
+          'timestamp': new Date().toISOString(),
+          'user_location': 'Vancouver / Victoria BC',
+          ...customParams
+        };
+
+        // Push to global GTM dataLayer
+        window.dataLayer.push(payload);
+
+        // Render in on-screen Debug Terminal
+        logToDebugConsole(payload);
+
+        // Update Event Counter badge
+        const counterEl = document.getElementById('event-counter');
+        if (counterEl) {
+          counterEl.innerText = `${eventLogCount} Events Logged`;
+        }
+      }
+
+      function logToDebugConsole(payload) {
+        const container = document.getElementById('debug-log-container');
+        if (!container) return;
+
+        const timeStr = new Date().toLocaleTimeString();
+        const eventName = payload.event || 'custom_event';
+
+        const logEntry = document.createElement('div');
+        logEntry.className = 'p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-mono leading-relaxed';
+        
+        logEntry.innerHTML = `
+          <div class="flex items-center justify-between text-indigo-300 font-semibold mb-1">
+            <span><span class="text-slate-500">[${timeStr}]</span> <span class="text-emerald-400">dataLayer.push</span> ({ event: "<span class="text-amber-300">${eventName}</span>" })</span>
+            <span class="text-[10px] text-slate-500">ID #${eventLogCount}</span>
+          </div>
+          <pre class="text-slate-300 overflow-x-auto text-[10px] bg-slate-950 p-2 rounded border border-slate-800/80">${JSON.stringify(payload, null, 2)}</pre>
+        `;
+
+        container.prepend(logEntry);
+      }
+
+      function clearDataLayerLogs() {
+        const container = document.getElementById('debug-log-container');
+        if (container) {
+          container.innerHTML = '<div class="text-slate-500 italic text-[11px]">Terminal logs cleared. Click buttons above to trigger new events.</div>';
+        }
+        eventLogCount = 0;
+        document.getElementById('event-counter').innerText = `0 Events Logged`;
+      }
+
+      function toggleDebugPanel() {
+        const panel = document.getElementById('debug-panel');
+        const container = document.getElementById('debug-log-container');
+        const icon = document.getElementById('panel-toggle-icon');
+
+        if (isPanelExpanded) {
+          container.classList.add('hidden');
+          icon.className = 'fa-solid fa-chevron-up text-sm';
+          isPanelExpanded = false;
+        } else {
+          container.classList.remove('hidden');
+          icon.className = 'fa-solid fa-chevron-down text-sm';
+          isPanelExpanded = true;
+        }
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById('toast-notification');
+        const msgEl = document.getElementById('toast-message');
+        if (!toast || !msgEl) return;
+
+        msgEl.innerText = message;
+        toast.classList.remove('hidden');
+
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 3000);
+      }
+
+      // ==========================================
+      // SPECIFIC INTERACTION EVENT TRACKERS
+      // ==========================================
+      function trackCustomClick(clickCategory, clickName, locationLabel) {
+        triggerDataLayerEvent('custom_button_click', {
+          'click_category': clickCategory,
+          'click_name': clickName,
+          'click_location': locationLabel
+        });
+      }
+
+      function trackOutboundLink(url, label) {
+        triggerDataLayerEvent('outbound_click', {
+          'outbound_url': url,
+          'link_label': label
+        });
+      }
+
+      function trackSkillClick(skillName) {
+        triggerDataLayerEvent('capability_click', {
+          'skill_name': skillName
+        });
+        showToast(`Skill clicked: ${skillName}`);
+      }
+
+      // ROI Calculator Functions
+      function updateRoiCalculator() {
+        const spend = parseInt(document.getElementById('spend-slider').value);
+        document.getElementById('spend-display').innerText = `$${spend.toLocaleString()} / mo`;
+
+        let multiplier = 4.0;
+        let cpa = 45;
+
+        if (selectedChannel === 'Meta Ads') { multiplier = 3.5; cpa = 38; }
+        if (selectedChannel === 'Omnichannel') { multiplier = 4.5; cpa = 42; }
+
+        const estRev = spend * multiplier;
+        document.getElementById('roi-revenue').innerText = `$${Math.round(estRev).toLocaleString()}`;
+        document.getElementById('roi-roas').innerText = `${multiplier.toFixed(1)}x`;
+        document.getElementById('roi-cpa').innerText = `$${cpa.toFixed(2)}`;
+      }
+
+      function selectChannel(channelName) {
+        selectedChannel = channelName;
+        const btns = document.querySelectorAll('.channel-btn');
+        btns.forEach(btn => {
+          if (btn.getAttribute('data-channel') === channelName) {
+            btn.className = 'channel-btn px-4 py-2 rounded-xl text-xs font-semibold border border-indigo-500 bg-brand-600/30 text-white';
+          } else {
+            btn.className = 'channel-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-300 hover:border-slate-600';
+          }
+        });
+        updateRoiCalculator();
+
+        triggerDataLayerEvent('calculator_option_change', {
+          'selected_channel': channelName
+        });
+      }
+
+      function trackSliderChange(val) {
+        triggerDataLayerEvent('calculator_slider_adjust', {
+          'monthly_spend_cad': parseInt(val)
+        });
+      }
+
+      function triggerRoiDataLayerPush() {
+        const spend = parseInt(document.getElementById('spend-slider').value);
+        const estRev = document.getElementById('roi-revenue').innerText;
+        const roas = document.getElementById('roi-roas').innerText;
+
+        triggerDataLayerEvent('roi_projection_calculated', {
+          'monthly_ad_spend': spend,
+          'projected_revenue': estRev,
+          'projected_roas': roas,
+          'platform': selectedChannel
+        });
+        showToast('ROI calculation pushed to dataLayer!');
+      }
+
+      // Service Tabs
+      function switchServiceTab(tabKey) {
+        const contents = document.querySelectorAll('.service-tab-content');
+        contents.forEach(c => c.classList.add('hidden'));
+
+        const target = document.getElementById(`tab-content-${tabKey}`);
+        if (target) target.classList.remove('hidden');
+
+        const btns = document.querySelectorAll('.service-tab-btn');
+        btns.forEach(b => {
+          b.className = 'service-tab-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all text-slate-400 hover:text-white';
+        });
+
+        const activeBtn = document.getElementById(`tab-btn-${tabKey}`);
+        if (activeBtn) {
+          activeBtn.className = 'service-tab-btn px-4 py-2 rounded-lg text-xs font-semibold transition-all bg-brand-600 text-white';
+        }
+
+        triggerDataLayerEvent('service_tab_select', {
+          'tab_name': tabKey
+        });
+      }
+
+      // Case Studies Filter
+      function filterCaseStudies(category) {
+        const cards = document.querySelectorAll('.case-study-card');
+        cards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        const btns = document.querySelectorAll('.portfolio-filter-btn');
+        btns.forEach(btn => {
+          if (btn.getAttribute('data-filter') === category) {
+            btn.className = 'portfolio-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 text-white';
+          } else {
+            btn.className = 'portfolio-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700';
+          }
+        });
+
+        triggerDataLayerEvent('filter_portfolio', {
+          'filter_category': category
+        });
+      }
+
+      // Modal Handlers
+      function openCaseModal(title, category, metric, linkUrl) {
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-category').innerText = category;
+        document.getElementById('modal-metric').innerText = metric;
+        document.getElementById('modal-link').href = linkUrl;
+
+        document.getElementById('case-modal').classList.remove('hidden');
+
+        triggerDataLayerEvent('view_item_modal', {
+          'item_name': title,
+          'item_category': category,
+          'key_metric': metric
+        });
+      }
+
+      function closeCaseModal() {
+        document.getElementById('case-modal').classList.add('hidden');
+      }
+
+      // Video Event Simulator
+      function simVideoAction(action) {
+        const text = document.getElementById('video-status-text');
+        const icon = document.getElementById('video-status-icon');
+
+        let percent = 0;
+        if (action === 'play') {
+          percent = 0;
+          text.innerText = 'Status: Playing (0%)';
+          icon.className = 'w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl';
+        } else if (action === 'progress_50') {
+          percent = 50;
+          text.innerText = 'Status: Playing (50%)';
+        } else if (action === 'complete') {
+          percent = 100;
+          text.innerText = 'Status: Finished (100%)';
+          icon.className = 'w-12 h-12 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xl';
+        }
+
+        triggerDataLayerEvent(`video_${action}`, {
+          'video_title': 'Paid Media Audit Strategy Walkthrough',
+          'video_percent': percent,
+          'video_provider': 'YouTube Simulator'
+        });
+        showToast(`Video event: ${action}`);
+      }
+
+      // Audit Form Handler
+      function handleAuditFormSubmit(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('form-name').value;
+        const email = document.getElementById('form-email').value;
+        const spend = document.getElementById('form-spend').value;
+        const goal = document.getElementById('form-goal').value;
+
+        // Custom Lead Event Push for GTM / GA4
+        triggerDataLayerEvent('generate_lead', {
+          'form_id': 'audit-form',
+          'form_name': 'Paid Media Audit Request',
+          'lead_monthly_spend': spend,
+          'lead_objective': goal,
+          'user_type': 'Inbound Prospect'
+        });
+
+        showToast('Audit Request Submitted! Event pushed.');
+        alert(`Thank you ${name}! Your audit request has been logged and sent to the dataLayer console below.`);
+
+        document.getElementById('audit-form').reset();
+      }
+
+      // Initialize on Load
+      window.onload = function() {
+        // Initial setup for ROI calculator
+        updateRoiCalculator();
+      };
+    </script>
 </body>
 </html>
